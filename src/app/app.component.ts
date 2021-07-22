@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Adress } from './interface/interfaceAdress';
+import { AdressService } from './service/adress.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularGetAdress';
+  dataAdress!: Adress
+  adress: string = ''
+
+  constructor(private httpService: AdressService){}
+
+  getAdress(){
+    this.httpService.getAdress(this.adress).subscribe((data) => {
+      this.dataAdress = data
+    })
+  }
 }
