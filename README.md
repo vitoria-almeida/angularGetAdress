@@ -9,5 +9,5 @@
 
 <h1>Mobile</h1>
 <p>
-  <img width="500" src="src/assets/getAdressMobile.png"/>
+  <img width="500" src="src/assets/mobile.png"/>
 </p>
